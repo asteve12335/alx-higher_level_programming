@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 def fizzbuzz():
-    for i in range(101):
+    for i in range(1, 101):
         if i != 100:
-            if i == 0:
-                print("{} ".format(i), end="")
-            elif i % 15 == 0:
+            if i % 15 == 0:
                 print("{} ".format("FizzBuzz"), end="")
             elif i % 5 == 0:
                 print("{} ".format("Buzz"), end="")
@@ -13,4 +11,4 @@ def fizzbuzz():
             else:
                 print("{} ".format(i), end="")
         else:
-            print("{}".format("Buzz"))
+            print("{} ".format("Buzz"))

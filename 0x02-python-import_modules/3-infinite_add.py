@@ -6,8 +6,8 @@ if __name__ == "__main__":
     n = len(argv)
 
     if n == 1:
-        sum = 0
+        sum_args = 0
     else:
         for index in range(1, n):
-            sum += int(index)
-    print(sum)
+            sum_args += int(index)
+    print(sum_args)

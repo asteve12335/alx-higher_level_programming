@@ -8,6 +8,6 @@ if __name__ == "__main__":
     if n == 1:
         sum = 0
     else:
-        for index in enumerate(argv):
+        for index in range(1, n):
             sum += int(index)
     print(sum)

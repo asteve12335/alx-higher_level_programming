@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
     if isinstance(matrix, list):
         square_func = lambda x: x ** 2

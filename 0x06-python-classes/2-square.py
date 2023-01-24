@@ -9,7 +9,8 @@ class Square:
         """Initialize a new square
 
         Args:
-            size (int): The size of a new square."""
+            size (int): The size of a new square.
+        """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         elif size < 0:

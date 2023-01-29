@@ -1,5 +1,21 @@
 #!/usr/bin/python3
 def matrix_divided(matrix, div):
+    """
+    Divide all the elements of a matrix
+
+    Args:
+    matrix: A list of lists of ints or floats
+    div: The divisor, an int or a float
+
+    Raises:
+    TypeError => rows of different sizes
+    TypeError => matrix contains non-numbers
+    TypeError => div is not an int or a float
+    ZeroDivisionError => div equals 0
+
+    Returns:
+    A new matrix
+    """
     if not isinstance(matrix, list):
         raise TypeError("matrix must be a matrix (list of lists)\
                 of integers/floats")

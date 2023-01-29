@@ -1,7 +1,15 @@
+===========================
+How to Use 0-add_integer.py
+===========================
 
-"""
-This is a test file in reStructuredText format.
-first import 'add_integer' from '0-add_integer' module:
+This module defines an integer addition function ``add_integer(a, b=98)``.
+
+Usage
+=====
+
+``add_integer(...)``` returns the addition of the two arguments. For numbers,
+that value is equivalent to using the ``+`` operator.
+
 >>> add_integer = __import__('0-add_integer').add_integer
 
 SUCCESS:
@@ -15,26 +23,28 @@ SUCCESS:
 FAILS:
 >>> add_integer(3, "6")
 Traceback (most recent call last):
-    ...
 TypeError("b must be an integer")
+
 >>> add_integer("3", 6)
 Traceback (most recent call last):
-        ...
 TypeError("a must be an integer")
+
 >>> add_integer("3", "8")
 Traceback (most recent call last):
-    ...
 TypeError: a must be an integer
+
 >>> add_integer(True)
 Traceback (most recent call last):
-    ...
 TypeError: a must be an integer
+
 >>> add_integer((3 + 5j), 4)
 Traceback (most recent call last):
-	...
 TypeError: a must be an integer
+
+>>> add_integer(4, (3 + 5j))
+Traceback (most recent call last):
+TypeError: b must be an integer
+
 >>> add_integer()
 Traceback (most recent call last):
-	...
 TypeError: add_integer() missing 1 required positional argument: 'a'
-"""

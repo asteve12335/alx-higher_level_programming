@@ -1,9 +1,5 @@
 #!/usr/bin/python3
-"""
-The following function accepts only int and float
-as parameters.
-It adds only integers though.
-"""
+"""Defines an integer addition function."""
 
 
 def add_integer(a, b=98):

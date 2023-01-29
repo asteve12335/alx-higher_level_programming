@@ -25,7 +25,7 @@ def matrix_divided(matrix, div):
                     of integers/floats")
 
     for i in range(len(matrix)):
-        if matrix[i + 1] == matrix[-1]:
+        if matrix[i] == matrix[-1]:
             break
         if len(matrix[i + 1]) != len(matrix[i]):
             raise TypeError("Each row of the matrix must have the same size")

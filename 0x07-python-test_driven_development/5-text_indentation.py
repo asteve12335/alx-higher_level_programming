@@ -3,7 +3,7 @@
 
 
 def text_indentation(text):
-    """Print text with two new lines after each 
+    """Print text with two new lines after each
     '.', '?', and ':'.
 
     Args:

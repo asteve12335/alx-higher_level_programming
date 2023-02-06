@@ -11,7 +11,7 @@ class Mylist(list):
         """
         Initialisations
         """
-        pass
+        super().__init__()
 
     def print_sorted(self):
         """

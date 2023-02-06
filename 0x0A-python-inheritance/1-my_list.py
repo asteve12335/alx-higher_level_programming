@@ -4,8 +4,8 @@
 
 class Mylist(list):
     """
-    Superclass -> list
-    Subclass -> Mylist
+    Superclass : list
+    Subclass : Mylist
     """
     def __init__(self):
         """

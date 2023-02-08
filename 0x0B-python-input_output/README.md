@@ -18,7 +18,7 @@ n - Input/Output
 - How to convert a JSON string to a Python data structure
 
 
-## Resources use
+## Resources
 -[Python Documentation - Reading and writing files](https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files)
 - [Book - Automate the boring stuff with python](https://automatetheboringstuff.com/)
 - [Youtube - Learn to program](https://www.youtube.com/watch?v=EukxMIsNeqU)

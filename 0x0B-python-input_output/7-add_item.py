@@ -1,20 +1,25 @@
 #!/usr/bin/python3
-"""A module that defines the add_item.py script.
-This script adds all arguments to a Python list,
-and then saves them to a file called add_item.json
 """
+module containing script that adds all arguments to a Python list
+and then save them to a file
+"""
+
+import json
 import sys
+save_to_json_file = __import__("5-save_to_json_file").save_to_json_file
+load_from_json_file = __import__("6-load_from_json_file").load_from_json_file
+
 
 if __name__ == "__main__":
-    save_to_json_file = __import__(
-        '5-save_to_json_file').save_to_json_file
-    load_from_json_file = __import__(
-        '6-load_from_json_file').load_from_json_file
-
     try:
-        my_list = load_from_json_file("add_item.json")
+        lst_val = load_from_json_file("add_item.json")
     except FileNotFoundError:
-        my_list = []
+        lst_val = []
 
-    my_list.extend(sys.argv[1:])
-    save_to_json_file(my_list, "add_item.json")
+    i = 1
+
+    while i < len(sys.argv):
+        lst_val.append(sys.argv[i])
+        i += 1
+
+    save_to_json_file(lst_val, "add_item.json")

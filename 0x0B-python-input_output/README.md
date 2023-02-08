@@ -24,3 +24,4 @@ n - Input/Output
 - [Youtube - Learn to program](https://www.youtube.com/watch?v=EukxMIsNeqU)
 - [realpython.com](https://realpython.com/lessons/python-unicode-overview/)
 - [JSON Serialization/Deserialization](https://realpython.com/python-json/)
+- [Python Read File and Python Write to File](https://techvidvan.com/tutorials/python-file-read-write/)

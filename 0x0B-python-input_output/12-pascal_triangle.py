@@ -16,7 +16,7 @@ def pascal_triangle(n):
             if j == 0 or j == i:
                 temp.append(1)
             else:
-                
+
                 temp.append(tri[i - 1][j - 1] + tri[i - 1][j])
         tri.append(temp)
     return tri

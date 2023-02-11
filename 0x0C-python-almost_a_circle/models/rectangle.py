@@ -62,7 +62,7 @@ class Rectangle(Base):
     def x(self, value):
         """x setter"""
         if not isinstance(value, int):
-            raise TypeError("x must be ab integer")
+            raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
         self.__x = value

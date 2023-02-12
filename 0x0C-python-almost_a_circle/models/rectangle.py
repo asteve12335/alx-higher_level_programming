@@ -107,12 +107,13 @@ class Rectangle(Base):
                 self.__width,
                 self.__height
                 )
+
     def update(self, *args, **kwargs):
         """
         Assigns an argument to each attribute.
         Args:
             *args(tuple): non-keyword args
-            **kwargs(dict): key-word args 
+            **kwargs(dict): key-word args
         """
         if args:
             for i, arg in enumerate(args):

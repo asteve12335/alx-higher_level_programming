@@ -107,3 +107,25 @@ class Rectangle(Base):
                 self.__width,
                 self.__height
                 )
+    def update(self, *args, **kwargs):
+        """
+        Assigns an argument to each attribute.
+        Args:
+            *args(tuple): non-keyword args
+            **kwargs(dict): key-word args 
+        """
+        if args:
+            for i, arg in enumerate(args):
+                if i == 0:
+                    self.id = arg
+                if i == 1:
+                    self.__width = arg
+                if i == 2:
+                    self.__height = arg
+                if i == 3:
+                    self.__x = arg
+                if i == 4:
+                    self.__y = arg
+        else:
+            for arg, value in kwargs.items():
+                setattr(self, arg, value)

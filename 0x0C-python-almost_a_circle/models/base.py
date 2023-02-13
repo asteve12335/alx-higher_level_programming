@@ -88,33 +88,3 @@ class Base:
             return inst_list
         except Exception:
             return []
-
-    @classmethod
-    def save_to_file(cls, list_objs):
-        '''
-        Writes the JSON string representation of list_objs to a file
-        args:
-            list_objs (list): List of instances that inherit Base
-        '''
-        lst = []
-        with open(cls.__name__ + ".json", "w", encoding="utf-8") as f:
-            if list_objs:
-                for obj in list_objs:
-                    lst.append(obj.to_dictionary())
-            f.write(cls.to_json_string(lst))
-
-    @classmethod
-    def load_from_file(cls):
-        '''
-        Returns a list of instances
-        '''
-        inst_list = []
-        try:
-            with open(cls.__name__ + ".json", mode="r", encoding="utf-8") as f:
-                lst = cls.from_json_string(f.read())
-
-            for obj in lst:
-                inst_list.append(cls.create(**obj))
-            return inst_list
-        except Exception:
-            return []

@@ -88,7 +88,7 @@ class Base:
             return inst_list
         except Exception:
             return []
-        
+
     @classmethod
     def save_to_file(cls, list_objs):
         '''
@@ -116,5 +116,5 @@ class Base:
             for obj in lst:
                 inst_list.append(cls.create(**obj))
             return inst_list
-        except:
+        except Exception:
             return []

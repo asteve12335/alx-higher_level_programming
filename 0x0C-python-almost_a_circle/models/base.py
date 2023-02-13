@@ -58,3 +58,17 @@ class Base:
                 for obj in list_objs:
                     lst.append(obj.to_dictionary())
             f.write(cls.to_json_string(lst))
+            
+    @classmethod
+    def create(cls, **dictionary):
+        '''
+        Returns an instance with all attributes already set
+        args:
+            dictionary (dict): A "double pointer" to a dictionary
+        '''
+        if cls.__name__ == 'Rectangle':
+            r = cls(10, 5)
+        if cls.__name__ == 'Square':
+            r = cls(4)
+        r.update(**dictionary)
+        return r

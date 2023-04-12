@@ -6,12 +6,12 @@ module.exports = class Square extends require('./5-square.js') {
       c = 'X';
     }
 
-    const char_Array = [];
+    const charArray = [];
 
     for (let i = 0; i < this.width; i++) {
-      char_Array.push(c.repeat(this.width));
+      charArray.push(c.repeat(this.width));
     }
 
-    console.log(char_Array.join('\n'));
+    console.log(charArray.join('\n'));
   }
 };

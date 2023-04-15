@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-""" lists all states from the database hbtn_0e_0_usa"""
+"""
+lists all states from the database hbtn_0e_0_usa
+"""
 
 import sys
 import MySQLdb
 
-f __name__ == "__main__":
+if __name__ == "__main__":
     db_connect = MySQLdb.connect(
             user=sys.argv[1],
             passwd=sys.argv[2],
@@ -13,3 +15,4 @@ f __name__ == "__main__":
     cursor = db_connect.cursor()
     cursor.execute("SELECT * FROM 'states'")
     [print(state) for state in cursor.fetchall()]
+    db_connection.close()

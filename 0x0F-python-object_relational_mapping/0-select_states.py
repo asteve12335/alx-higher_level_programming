@@ -4,20 +4,20 @@
 import sys
 import MySQLdb
 
+f __name__ == "__main__":
+    try:
+        db_connect = MySQLdb.connect(
+                user=sys.argv[1],
+                passwd=sys.argv[2],
+                db=sys.argv[3]
+                )
+    except MySQLdb.error:
+        print("Can't connect to Database")
+    else:
+        print("Connected")
 
-try:
-    db_connect = MySQLdb.connect(
-            user=sys.argv[1],
-            passwd=sys.argv[2],
-            db=sys.argv[3]
-            )
-except MySQLdb.error:
-    print("Can't connect to Database")
-else:
-    print("Connected")
+        cursor = db_connect.cursor()
 
-    cursor = db_connect.cursor()
+        cursor.execute("SELECT * FROM 'states'")
 
-    cursor.execute("SELECT * FROM 'states'")
-
-    [print(state) for state in cursor.fetchall()]
+        [print(state) for state in cursor.fetchall()]

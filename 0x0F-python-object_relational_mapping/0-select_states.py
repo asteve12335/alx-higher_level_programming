@@ -7,30 +7,12 @@ import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    # create connection to our database
-    db_connect = MySQLdb.connect(
-            host='localhost',
-            user=sys.argv[1],
-            passwd=sys.argv[2],
-            db=sys.argv[3],
-            port=3306
-            )
-
-    # Create cursor to execute queries
-    cursor = db_connect.cursor()
-
-    # Use cursor to execute queries
-    cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
-
-    # Retrieve results from query
-    results = cursor.fetchall()
-
-    # Display each result
+    db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
+                         passwd=sys.argv[2], db=sys.argv[3])
+    cur = db.cursor()
+    cur.execute("SELECT * FROM states ORDER BY states.id ASC")
+    results = cur.fetchall()
     for state in results:
         print(state)
-
-    # Close our cursor
-    cursor.close()
-
-    # Close the connection to our database
-    db_connection.close()
+    cur.close()
+    db.close()

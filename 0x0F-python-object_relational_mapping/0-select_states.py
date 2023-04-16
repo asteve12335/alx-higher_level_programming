@@ -29,5 +29,8 @@ if __name__ == "__main__":
     for state in results:
         print(state)
 
+    # Close our cursor
+    cursor.close()
+
     # Close the connection to our database
     db_connection.close()

@@ -6,22 +6,22 @@ lists all states from the database hbtn_0e_0_usa
 import sys
 import MySQLdb
 
-# create connection to our database
-db_connect = MySQLdb.connect(
-        host='localhost'
-        user=sys.argv[1],
-        passwd=sys.argv[2],
-        db=sys.argv[3],
-        port=3306
-        )
-
-# Create cursor to execute queries
-cursor = db_connect.cursor()
-
-# Use cursor to execute queries
-cursor.execute("SELECT * FROM 'states'")
-
 if __name__ == "__main__":
+    # create connection to our database
+    db_connect = MySQLdb.connect(
+            host='localhost'
+            user=str(sys.argv[1]),
+            passwd=sys.argv[2],
+            db=str(sys.argv[3]),
+            port=3306
+            )
+
+    # Create cursor to execute queries
+    cursor = db_connect.cursor()
+
+    # Use cursor to execute queries
+    cursor.execute("SELECT * FROM 'states'")
+
     # Retrieve results from query
     results = cursor.fetchall()
 
@@ -29,5 +29,5 @@ if __name__ == "__main__":
     for state in results:
         print(state)
 
-# Close the connection to our database
-db_connection.close()
+    # Close the connection to our database
+    db_connection.close()

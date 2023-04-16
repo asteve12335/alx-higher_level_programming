@@ -20,7 +20,7 @@ if __name__ == "__main__":
     cursor = db_connect.cursor()
 
     # Use cursor to execute queries
-    cursor.execute("SELECT * FROM 'states'")
+    cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
 
     # Retrieve results from query
     results = cursor.fetchall()

@@ -22,9 +22,8 @@ if __name__ == "__main__":
     cur = conn.cursor()
 
     # Execute the SQL query to retrieve states
-    query = "SELECT * FROM states WHERE name LIKE BINARY %s ORDER BY id ASC"
-    state_name = sys.argv[4]
-    cur.execute(query, (state_name,))
+    cur.execute("SELECT * FROM states WHERE BINARY name='{}'\
+               ORDER BY id ASC".format(sys.argv[4]))
 
     # Print the results
     results = cur.fetchall()

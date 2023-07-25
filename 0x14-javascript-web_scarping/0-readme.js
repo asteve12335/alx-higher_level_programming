@@ -1,6 +1,6 @@
 #!/usr/bin/node
 // A script that reads and prints the content of a file.
-const f = require('f');
+const fs = require('fs');
 
 // The content of the file must be read in utf-8
 const file = process.argv[2];

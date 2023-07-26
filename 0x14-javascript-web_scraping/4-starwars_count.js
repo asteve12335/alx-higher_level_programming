@@ -2,13 +2,13 @@
 // Script that prints the number of movies where the character “Wedge Antilles” is present.
 
 // The first argument is the API URL of the Star wars API: https://swapi-api.hbtn.io/api/films/
-const api_Url = process.argv[2];
+const apiUrl = process.argv[2];
 
 // The request must be made to this URL with the character ID 18
 const request = require('request');
 
 // Make the request and print the number of movies where the character “Wedge Antilles” is present
-request(api_Url, function (error, _response, body) {
+request(apiUrl, function (error, _response, body) {
   // If an error occurred during the request, print the error object
   if (error) {
     console.error(error);

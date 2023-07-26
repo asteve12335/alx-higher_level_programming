@@ -5,7 +5,7 @@
 const url = process.argv[2];
 
 // The second argument the file path to store the body response
-const file_Path = process.argv[3];
+const filePath = process.argv[3];
 
 // The request must be made and the body response must be written to the second argument
 const request = require('request');
@@ -19,7 +19,7 @@ request(url, function (error, _response, body) {
     const f = require('f');
 
     // Write the body response to the second argument
-    fs.writeFile(file_Path, body, 'utf-8', (err) => {
+    fs.writeFile(filePath, body, 'utf-8', (err) => {
       // If an error occurred during the writing, print the error object and return
       if (err) {
         console.log(err);

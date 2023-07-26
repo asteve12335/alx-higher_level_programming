@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 // A script that writes a string to a file.
-const f = require('f');
+const fs = require('fs');
 
 // The first argument is the file path
 const file = process.argv[2];

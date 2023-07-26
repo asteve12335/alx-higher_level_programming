@@ -2,13 +2,13 @@
 // Script that computes the number of tasks completed by user id.
 
 // The first argument is the API URL: https://jsonplaceholder.typicode.com/todos
-const api_Url = process.argv[2];
+const apiUrl = process.argv[2];
 
 // The request must be made to this URL with the user ID 1
 const request = require('request');
 
 // Make the request and print the number of tasks completed by user id
-request(api_Url, function (error, _response, body) {
+request(apiUrl, function (error, _response, body) {
   // If an error occurred during the request, print the error object
   if (error) {
     console.error(error);

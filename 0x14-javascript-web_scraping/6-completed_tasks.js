@@ -8,7 +8,7 @@ const apiUrl = process.argv[2];
 const request = require('request');
 
 // Make the request and print the number of tasks completed by user id
-request(apiUrl, function (error, _response, body) {
+request(apiUrl, function (error, response, body) {
   // If an error occurred during the request, print the error object
   if (error) {
     console.error(error);

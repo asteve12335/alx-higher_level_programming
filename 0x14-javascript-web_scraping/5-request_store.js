@@ -16,7 +16,7 @@ request(url, function (error, _response, body) {
   if (error) {
     console.error(error);
   } else {
-    const f = require('f');
+    const fs = require('fs');
 
     // Write the body response to the second argument
     fs.writeFile(filePath, body, 'utf-8', (err) => {
